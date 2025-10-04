@@ -18,10 +18,10 @@ on:
           python-version: ["3.9","3.10","3.11","3.12", "3.13"]
       steps:
         - uses: actions/checkout@v4
-        - name: Set up Python ${{$matrix.python-version}}
+        - name: Set up Python ${{ matrix.python-version }}
           uses: actions/python-setup@v5
           with:
-            python-version: ${{matrix.python-version}}
+            python-version: ${{ matrix.python-version }}
             cache: "pip"
 
         - name: Install dependencies
